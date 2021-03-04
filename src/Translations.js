@@ -48,5 +48,10 @@ export default {
         next: 'Nästa',
         back: 'Tillbaka',
         finish: 'Skicka'
+    },
+    cs: {
+        next: 'Další',
+        back: 'Předchozí',
+        finish: 'Dokončit'
     }
 }
