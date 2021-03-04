@@ -11,9 +11,10 @@
                 <template v-for="(step, index) in steps">
                     <div :class="['step', isStepActive(index, step)]" :key="index" :style="{width: `${100 / steps.length}%`}">
                         <div class="circle">
-                            <i class="material-icons md-18">
+                            <i v-if="step.completed || step.icon" class="material-icons md-18">
                                 {{ (step.completed) ? 'done' : step.icon }}
                             </i>
+                            <span v-else>{{ index + 1 }}</span>
                         </div>
                         <div class="step-title">
                             <h4>{{step.title}}</h4>
